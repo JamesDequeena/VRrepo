@@ -24,6 +24,6 @@ class Main
 		return piApproximation;
 
 		};
-	System.out.println(lP.leibniz(1000));
+	System.out.printf(lP.leibniz(1000));
 	}
 }
