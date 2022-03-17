@@ -4,9 +4,34 @@ public class Code
     {
         void printQuotient(float x , float y);
     }
+interface leibnizVR 
+{
+	public double leibniz(int n);
+}
+
+	
+		
 
     public Code()
     {
+        leibnizPi lP = (n) ->{
+			double count = 1.0;
+			double piApproximation = 0.0;
+			for(int i = 0; i<n;i++)
+			{
+				if(i%2==0)
+				{
+					piApproximation = piApproximation + (4.0/count);
+				}
+				if(i%2==1)
+				{
+					piApproximation = piApproximation - (4.0/count); 
+				}
+				count = count + 2.0;
+			}
+		return piApproximation;
+        }
+        	System.out.println(lP.leibniz(1000));
         PQuotient run = (x,y)-> System.out.printf("The quotient of %.3f and %.3f is : %.3f",x,y,x/y);
         run.printQuotient(4.0f,6.0f);
 
@@ -15,3 +40,4 @@ public class Code
     {
         Code app = new Code();
     }
+
