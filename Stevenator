@@ -1,0 +1,22 @@
+interface PerfectSquare
+{
+	public boolean findPerfectSquare(int num);
+}
+
+public class PerfectSquares
+{
+	public static void main(String args[])
+	{
+		PerfectSquare ps = (num) ->
+		{
+			int squareRoot = (int) Math.sqrt(num);
+
+			if (squareRoot * squareRoot == num)
+				return true;
+
+			return false;
+		};
+
+		System.out.println(ps.findPerfectSquare(10));
+	}
+}
